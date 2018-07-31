@@ -1,0 +1,68 @@
+@mixin flex-prop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin transition {
+    transition: all .3s;
+}
+
+@mixin circle($width, $color) {
+    width: $width;
+    height: $width;
+    border-radius: $width / 2;
+    background-color: $color;
+}
+
+@mixin transition-prop($prop, $time, $func, $delay) {
+    transition-property: $prop;
+    transition-duration: $time;
+    transition-timing-function: $func;
+    transition-delay: $delay;
+}
+
+// Установка одного свойства на ховер элемента с плавной анимацией
+@mixin hover-anim-one($prop, $value) {
+    @include transition;
+
+    &:hover {
+        #{$prop}: $value;
+    }
+}
+
+// Установка нескольких свойств из map на ховер элемента с плавной анимацией
+@mixin hover-anim-many($list-prop) {
+    @include transition;
+
+    &:hover {
+        @each $key, $value in $list-prop {
+            #{$key}: $value;
+        }
+    }
+}
+
+@mixin item--icon-before($top, $translateX, $translateY) {
+    content: "";
+    position: absolute;
+    top: $top;
+    transform: translate($translateX, $translateY);
+    left: 0;
+}
+
+//responsive
+@function rem($px, $base:12px) {
+    @return $px / $base + 0rem;
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}

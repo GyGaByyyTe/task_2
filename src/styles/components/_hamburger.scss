@@ -1,0 +1,78 @@
+.hamburger {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 10;
+}
+.hamburger__line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: rgba($color: $color__dark, $alpha: 0.9);
+  border-radius: 3px;
+  transform: translateY(-65%)
+}
+.hamburger__link {
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+  width: 1.33rem;
+  height: 1.11rem;
+
+  &:before {
+    content: ' ';
+    height: 3px;
+    top: 0;
+    transform: translateY(0);
+    transform-origin: 0 50%;
+
+    @include transition;
+
+    @extend .hamburger__line;
+  }
+
+  &:after {
+    content: ' ';
+    height: 3px;
+    top: 100%;
+    transform: translateY(-100%);
+    transform-origin: 0 50%;
+
+    @include transition;
+
+    @extend .hamburger__line;
+  }
+
+  &--pressed {
+    .hamburger__line {
+      opacity: 0;
+    }
+
+    &:before {
+      left: 0;
+      top: -8%;
+      position: absolute;
+      content: ' ';
+      background-color: rgba($color: $color__dark, $alpha: 0.9);
+      transform: rotate(45deg);
+      @include phones {
+        top: 2%;
+      }
+    }
+
+    &:after {
+      bottom: -15%;
+      top: initial;
+      left: 0%;
+      position: absolute;
+      content: ' ';
+      background-color: rgba($color: $color__dark, $alpha: 0.9);
+      transform: rotate(-45deg);
+      @include phones {
+        bottom: -23%;
+      }
+    }
+  }
+}

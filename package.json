@@ -2,19 +2,21 @@
   "name": "task_2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "browser-sync": "^2.24.6",
+    "del": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^5.0.0",
+    "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.1"
+    "gulp-sass": "^4.0.1",
+    "node-normalize-scss": "^8.0.0"
   },
-  "dependencies": {
-    "normalize.css": "^8.0.0"
-  }
+  "dependencies": {}
 }

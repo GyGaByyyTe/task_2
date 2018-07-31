@@ -1,0 +1,33 @@
+extends ../template
+
+block variables
+    - var title = 'Яндекс Дом'
+
+block content
+    .wrapper
+        .content
+            header.header.container
+                .header__left
+                    .logo
+                .header__right
+                    .hamburger                
+                        a(class='hamburger__link') Меню
+                            .hamburger__line    
+                    nav.menu
+                        ul.menu__list
+                            li.menu__item.menu__item--active Сводка
+                            li.menu__item Устройства
+                            li.menu__item Сценарии
+
+            main.main
+        footer.footer
+            ul.footer__list
+                li.footer__item
+                    a.footer__link Помощь
+                li.footer__item
+                    a.footer__link Обратная связь
+                li.footer__item                
+                    a.footer__link Разработчикам
+                li.footer__item
+                    a.footer__link Условия использования
+            .footer__copyright &copy; 2001-2018 OOO "Яндекс"

@@ -1,0 +1,18 @@
+$menu__padding: 1.5rem;
+
+.menu {
+  position: absolute;
+  z-index: 20;
+  left: $menu__padding;
+  right: $menu__padding;
+  top: -100%;
+  will-change: top;
+  background-color: $color__yellow;
+  border-radius: 10px;
+
+  @include transition;
+
+  &--active {
+    top: $menu__padding;
+  }
+}

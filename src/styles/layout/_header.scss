@@ -1,0 +1,16 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+
+  &__left,
+  &__right {
+    display: inline-block;
+    vertical-align: middle;
+    width: 49%;
+  }
+
+  &__right {
+    text-align: right;
+  }
+}
