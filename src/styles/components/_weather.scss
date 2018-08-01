@@ -1,0 +1,36 @@
+.weather {
+  &__item {
+    display: inline-block;
+    margin-right: 1.58rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__title {
+    color: $color__dark--light;
+  }
+  &__status {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-align: left;
+    position: relative;
+    &--rain {
+      padding-right: rem(22px, 12px);
+      &:after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: rem(19px, 12px);
+        height: rem(27px, 12px);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        // background-image: url('assets/images/yandex_home@1x.png');
+        // background-image: url('assets/images/yandex_home@2x.png');
+        background-image: url('assets/images/svg/cloud-drizzle.svg');
+      }
+    }
+  }
+}

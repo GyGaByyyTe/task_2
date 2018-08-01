@@ -7,35 +7,131 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="main.min.css">
+    <link rel="stylesheet" href="styles.min.css">
   </head>
   <body>
     <div class="wrapper">
       <div class="content">
         <header class="header container">
-          <div class="header__left">
-            <div class="logo"></div>
-          </div>
+          <div class="header__left"><a class="logo" href="#"></a></div>
           <div class="header__right">
-            <div class="hamburger">               <a class="hamburger__link">Меню
+            <div class="hamburger">               <a class="hamburger__link" href="#">Меню
                 <div class="hamburger__line">   </div></a></div>
             <nav class="menu">
               <ul class="menu__list">
-                <li class="menu__item menu__item--active">Сводка</li>
-                <li class="menu__item">Устройства</li>
-                <li class="menu__item">Сценарии</li>
+                <li class="menu__item menu__item--active"> <a class="menu__link" href="#">Сводка</a></li>
+                <li class="menu__item"> <a class="menu__link" href="#">Устройства</a></li>
+                <li class="menu__item"> <a class="menu__link" href="#">Сценарии</a></li>
               </ul>
             </nav>
           </div>
         </header>
-        <main class="main"></main>
+        <div class="container">
+          <main class="main">
+            <div class="main__info">
+              <h4 class="main__title">Привет, Андрей!</h4>
+              <div class="main__status">Двери и окна закрыты, сигнализация включена.</div>
+              <div class="main__weather">
+                <ul class="weather">
+                  <li class="weather__item">
+                    <div class="weather__title">Дома</div>
+                    <div class="weather__status">+23</div>
+                  </li>
+                  <li class="weather__item">
+                    <div class="weather__title">За окном</div>
+                    <div class="weather__status weather__status--rain">+19     </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="main__scripts">
+              <ul class="scripts">
+                <li class="scripts__item">
+                  <div class="scripts__logo scripts__logo--temperature_off">           </div>
+                  <div class="scripts__title">Phillips Cooler             </div>
+                  <div class="scripts__encounter">Начнет охлаждать в 16:30 </div>
+                </li>
+                <li class="scripts__item">
+                  <div class="scripts__logo scripts__logo--light_off">           </div>
+                  <div class="scripts__title">Xiaomi Yeelight LED Smart Bulb             </div>
+                  <div class="scripts__encounter">Включится в 17:00         </div>
+                </li>
+                <li class="scripts__item">
+                  <div class="scripts__logo scripts__logo--sheduled">          </div>
+                  <div class="scripts__title">Я ухожу         </div>
+                </li>
+              </ul>
+            </div>
+          </main>
+        </div>
+        <section class="favorites">
+          <h4 class="favorites__title">Избранные сценарии          </h4>
+          <div class="favorites__scripts">
+            <ul class="scripts">
+              <li class="scripts__item scripts__item--favorite">
+                <div class="scripts__logo scripts__logo--light_on">           </div>
+                <div class="scripts__title">Выключить весь свет в доме и во дворе             </div>
+              </li>
+              <li class="scripts__item scripts__item--favorite">
+                <div class="scripts__logo scripts__logo--sheduled">           </div>
+                <div class="scripts__title">Я ухожу                 </div>
+              </li>
+              <li class="scripts__item scripts__item--favorite">
+                <div class="scripts__logo scripts__logo--light_on">          </div>
+                <div class="scripts__title">Включить свет в коридоре   </div>
+              </li>
+              <li class="scripts__item scripts__item--favorite">
+                <div class="scripts__logo scripts__logo--temperature_on">          </div>
+                <div class="scripts__title">Набрать горячую ванну</div>
+                <div class="scripts__encounter">Начнется в 18:00     </div>
+              </li>
+              <li class="scripts__item scripts__item--favorite">
+                <div class="scripts__logo scripts__logo--temperature_on">          </div>
+                <div class="scripts__title">Сделать пол тёплым во всей квартире    </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="favorites">
+          <h4 class="favorites__title">Избранные устройства      </h4>
+          <div class="favorites__filter">   </div>
+          <div class="favorites__scripts">
+            <ul class="scripts">
+              <li class="scripts__item">
+                <div class="scripts__logo scripts__logo--light_on">           </div>
+                <div class="scripts__title">Xiaomi Yeelight LED Smart Bulb    </div>
+                <div class="scripts__encounter">Включено            </div>
+              </li>
+              <li class="scripts__item">
+                <div class="scripts__logo scripts__logo--light_off">         </div>
+                <div class="scripts__title">D-Link Omna 180 Cam        </div>
+                <div class="scripts__encounter">Включится в 17:00         </div>
+              </li>
+              <li class="scripts__item">
+                <div class="scripts__logo scripts__logo--temperature_off">       </div>
+                <div class="scripts__title">Elgato Eve Degree Connected  </div>
+                <div class="scripts__encounter">Выключено до 17:00     </div>
+              </li>
+              <li class="scripts__item">
+                <div class="scripts__logo scripts__logo--light_off">         </div>
+                <div class="scripts__title">LIFX Mini Day &amp; Dusk A60 E27</div>
+                <div class="scripts__encounter">Включится в 17:00      </div>
+              </li>
+              <li class="scripts__item">
+                <div class="scripts__logo scripts__logo--light_on">          </div>
+                <div class="scripts__title">Xiaomi Mi Air Purifier 2S  </div>
+                <div class="scripts__encounter">Включено                                                                                 </div>
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
       <footer class="footer">
         <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link">Помощь</a></li>
-          <li class="footer__item"><a class="footer__link">Обратная связь</a></li>
-          <li class="footer__item">               <a class="footer__link">Разработчикам</a></li>
-          <li class="footer__item"><a class="footer__link">Условия использования</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Помощь</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Обратная связь</a></li>
+          <li class="footer__item">               <a class="footer__link" href="#">Разработчикам</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Условия использования</a></li>
         </ul>
         <div class="footer__copyright">&copy; 2001-2018 OOO "Яндекс"</div>
       </footer>

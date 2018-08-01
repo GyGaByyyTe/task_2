@@ -1,0 +1,35 @@
+.main {
+  width: 100%;
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+  background-image: url('assets/images/bg@1x.png');
+  padding-top: 1.75rem;
+  padding-bottom: 1.67rem;
+  margin-top: 5.33rem;
+  // overflow: hidden;
+  // white-space: nowrap;
+
+  &__info {
+    padding-left: 1.67rem;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__status {
+    margin-top: 0.42rem;
+  }
+
+  &__weather {
+    margin-top: 1.25rem;
+  }
+
+  &__scripts {
+    margin-top: 1.67rem;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}

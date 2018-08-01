@@ -41,7 +41,7 @@ function templates() {
 // scss
 function styles() {
   return gulp
-    .src('./src/styles/main.scss')
+    .src('./src/styles/styles.scss')
     .pipe(
       sass({
         outputStyle: 'compressed',

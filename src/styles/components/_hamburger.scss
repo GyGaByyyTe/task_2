@@ -57,9 +57,9 @@
       content: ' ';
       background-color: rgba($color: $color__dark, $alpha: 0.9);
       transform: rotate(45deg);
-      @include phones {
-        top: 2%;
-      }
+      // @include for-phone-only {
+      //   top: 2%;
+      // }
     }
 
     &:after {
@@ -70,7 +70,7 @@
       content: ' ';
       background-color: rgba($color: $color__dark, $alpha: 0.9);
       transform: rotate(-45deg);
-      @include phones {
+      @include for-phone-only {
         bottom: -23%;
       }
     }

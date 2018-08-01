@@ -1,0 +1,67 @@
+.scripts {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__item {
+    margin: 0 1.67rem;
+    display: inline-flex;
+    flex-direction: column;
+    width: 16.67rem;
+    height: 10rem;
+    background-color: $color__gray;
+    border-radius: 20px;
+    padding: 1.25rem 1.25rem 1.17rem;
+
+    &--favorite {
+      height: 8.33rem;
+    }
+  }
+
+  &__logo {
+    margin-bottom: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(24px, 12px);
+    height: rem(24px, 12px);
+
+    &--temperature_off {
+      background-image: url('assets/images/svg/icon_temperature.svg');
+    }
+
+    &--temperature_on {
+      background-image: url('assets/images/svg/icon_temperature_2.svg');
+    }
+
+    &--light_off {
+      background-image: url('assets/images/svg/icon_sun.svg');
+    }
+
+    &--light_on {
+      background-image: url('assets/images/svg/icon_sun_2.svg');
+    }
+
+    &--sheduled {
+      background-image: url('assets/images/svg/icon_scheduled.svg');
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: rem(14px, 12px);
+    color: $color__dark;
+    letter-spacing: 0;
+    text-align: left;
+    margin-bottom: 0.34rem;
+    white-space: initial;
+  }
+
+  &__encounter {
+    color: $color__dark--light;
+  }
+}

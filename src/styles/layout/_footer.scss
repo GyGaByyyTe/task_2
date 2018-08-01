@@ -6,7 +6,8 @@
   text-align: center;
 
   &__list {
-    max-width: 70%;
+    max-width: rem(300px,12px);
+    width: 70%;
     margin: 0 auto;
     font-size: 14px;
     color: $color__black;

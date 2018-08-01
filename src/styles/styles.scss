@@ -11,11 +11,15 @@
 //Ипортируем Cтили для отдельных элементов страницы
 @import "layout/header";
 @import "layout/footer";
+@import "layout/main";
+@import "layout/favorites";
 
 //Ипортируем Стили отдельных компонентов
 @import 'components/logo';
 @import 'components/menu';
 @import 'components/hamburger';
+@import 'components/weather';
+@import 'components/scripts';
 
 //Ипортируем Персональные стили для страниц
 // @import 'pages/home';

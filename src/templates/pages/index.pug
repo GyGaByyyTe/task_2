@@ -8,26 +8,100 @@ block content
         .content
             header.header.container
                 .header__left
-                    .logo
+                    a(href="#").logo
                 .header__right
                     .hamburger                
-                        a(class='hamburger__link') Меню
+                        a(href="#").hamburger__link Меню
                             .hamburger__line    
                     nav.menu
                         ul.menu__list
-                            li.menu__item.menu__item--active Сводка
-                            li.menu__item Устройства
-                            li.menu__item Сценарии
+                            li.menu__item.menu__item--active 
+                                a(href="#").menu__link Сводка
+                            li.menu__item 
+                                a(href="#").menu__link Устройства
+                            li.menu__item 
+                                a(href="#").menu__link Сценарии
+            .container
+                main.main
+                    .main__info
+                        h4.main__title Привет, Андрей!
+                        .main__status Двери и окна закрыты, сигнализация включена.
+                        .main__weather
+                            ul.weather
+                                li.weather__item
+                                    .weather__title Дома
+                                    .weather__status +23
+                                li.weather__item
+                                    .weather__title За окном
+                                    .weather__status.weather__status--rain +19     
+                    .main__scripts
+                        ul.scripts
+                            li.scripts__item
+                                .scripts__logo.scripts__logo--temperature_off            
+                                .scripts__title Phillips Cooler             
+                                .scripts__encounter Начнет охлаждать в 16:30 
+                            li.scripts__item
+                                .scripts__logo.scripts__logo--light_off            
+                                .scripts__title Xiaomi Yeelight LED Smart Bulb             
+                                .scripts__encounter Включится в 17:00         
+                            li.scripts__item
+                                .scripts__logo.scripts__logo--sheduled           
+                                .scripts__title Я ухожу         
+            section.favorites
+                h4.favorites__title Избранные сценарии          
+                .favorites__scripts
+                    ul.scripts
+                        li.scripts__item.scripts__item--favorite
+                            .scripts__logo.scripts__logo--light_on            
+                            .scripts__title Выключить весь свет в доме и во дворе             
+                        li.scripts__item.scripts__item--favorite
+                            .scripts__logo.scripts__logo--sheduled            
+                            .scripts__title Я ухожу                 
+                        li.scripts__item.scripts__item--favorite
+                            .scripts__logo.scripts__logo--light_on           
+                            .scripts__title Включить свет в коридоре   
+                        li.scripts__item.scripts__item--favorite
+                            .scripts__logo.scripts__logo--temperature_on           
+                            .scripts__title Набрать горячую ванну
+                            .scripts__encounter Начнется в 18:00     
+                        li.scripts__item.scripts__item--favorite
+                            .scripts__logo.scripts__logo--temperature_on           
+                            .scripts__title Сделать пол тёплым во всей квартире    
 
-            main.main
+            section.favorites
+                h4.favorites__title Избранные устройства      
+                .favorites__filter    
+                .favorites__scripts
+                    ul.scripts
+                        li.scripts__item
+                            .scripts__logo.scripts__logo--light_on            
+                            .scripts__title Xiaomi Yeelight LED Smart Bulb    
+                            .scripts__encounter Включено            
+                        li.scripts__item
+                            .scripts__logo.scripts__logo--light_off          
+                            .scripts__title D-Link Omna 180 Cam        
+                            .scripts__encounter Включится в 17:00         
+                        li.scripts__item
+                            .scripts__logo.scripts__logo--temperature_off        
+                            .scripts__title Elgato Eve Degree Connected  
+                            .scripts__encounter Выключено до 17:00     
+                        li.scripts__item
+                            .scripts__logo.scripts__logo--light_off          
+                            .scripts__title LIFX Mini Day &amp; Dusk A60 E27
+                            .scripts__encounter Включится в 17:00      
+                        li.scripts__item
+                            .scripts__logo.scripts__logo--light_on           
+                            .scripts__title Xiaomi Mi Air Purifier 2S  
+                            .scripts__encounter Включено                                                                                 
+                                                                                      
         footer.footer
             ul.footer__list
                 li.footer__item
-                    a.footer__link Помощь
+                    a(href="#").footer__link Помощь
                 li.footer__item
-                    a.footer__link Обратная связь
+                    a(href="#").footer__link Обратная связь
                 li.footer__item                
-                    a.footer__link Разработчикам
+                    a(href="#").footer__link Разработчикам
                 li.footer__item
-                    a.footer__link Условия использования
+                    a(href="#").footer__link Условия использования
             .footer__copyright &copy; 2001-2018 OOO "Яндекс"
