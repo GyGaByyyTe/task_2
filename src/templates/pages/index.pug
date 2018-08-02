@@ -21,10 +21,13 @@ block content
                                 a(href="#").menu__link Устройства
                             li.menu__item 
                                 a(href="#").menu__link Сценарии
-            .container
-                main.main
+            
+            main.container.main    
+                .main__header
+                    h4.main__title Главное              
+                .main__content     
                     .main__info
-                        h4.main__title Привет, Андрей!
+                        h4.main__greeting Привет, Андрей!
                         .main__status Двери и окна закрыты, сигнализация включена.
                         .main__weather
                             ul.weather
@@ -48,9 +51,10 @@ block content
                                 .scripts__logo.scripts__logo--sheduled           
                                 .scripts__title Я ухожу         
             section.favorites
-                h4.favorites__title Избранные сценарии          
+                .favorites__header            
+                    h4.favorites__title Избранные сценарии          
                 .favorites__scripts
-                    ul.scripts
+                    ul.scripts.scripts--favorite
                         li.scripts__item.scripts__item--favorite
                             .scripts__logo.scripts__logo--light_on            
                             .scripts__title Выключить весь свет в доме и во дворе             
@@ -68,28 +72,43 @@ block content
                             .scripts__logo.scripts__logo--temperature_on           
                             .scripts__title Сделать пол тёплым во всей квартире    
 
-            section.favorites
-                h4.favorites__title Избранные устройства      
-                .favorites__filter    
+            section.favorites.favorites--devices
+                .favorites__header.favorites__header--devices
+                    h4.favorites__title Избранные устройства      
+                    .favorites__types
+                        //- select.types
+                        //-     option.types__item Все
+                        //-     option.types__item Кухня
+                        //-     option.types__item Зал
+                        //-     option.types__item Лампочки
+                        //-     option.types__item Камеры            
+                        .types 
+                            span.types__item.types__item--active Все
+                            ul.types__list
+                                li.types__item Кухня
+                                li.types__item Зал
+                                li.types__item Лампочки
+                                li.types__item Камеры                            
+                        ul.types__list.types__list--hide      
                 .favorites__scripts
                     ul.scripts
-                        li.scripts__item
+                        li.scripts__item.scripts__item--device
                             .scripts__logo.scripts__logo--light_on            
                             .scripts__title Xiaomi Yeelight LED Smart Bulb    
                             .scripts__encounter Включено            
-                        li.scripts__item
+                        li.scripts__item.scripts__item--device
                             .scripts__logo.scripts__logo--light_off          
                             .scripts__title D-Link Omna 180 Cam        
                             .scripts__encounter Включится в 17:00         
-                        li.scripts__item
+                        li.scripts__item.scripts__item--device
                             .scripts__logo.scripts__logo--temperature_off        
                             .scripts__title Elgato Eve Degree Connected  
                             .scripts__encounter Выключено до 17:00     
-                        li.scripts__item
+                        li.scripts__item.scripts__item--device
                             .scripts__logo.scripts__logo--light_off          
                             .scripts__title LIFX Mini Day &amp; Dusk A60 E27
                             .scripts__encounter Включится в 17:00      
-                        li.scripts__item
+                        li.scripts__item.scripts__item--device
                             .scripts__logo.scripts__logo--light_on           
                             .scripts__title Xiaomi Mi Air Purifier 2S  
                             .scripts__encounter Включено                                                                                 

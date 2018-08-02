@@ -8,6 +8,9 @@
   }
   &__title {
     color: $color__dark--light;
+    @include for-desktop-up {
+      font-size: rem(14px);
+    }
   }
   &__status {
     font-size: 24px;
@@ -15,8 +18,15 @@
     letter-spacing: 0;
     text-align: left;
     position: relative;
+
+    @include for-desktop-up {
+      font-size: rem(36px);
+    }
     &--rain {
-      padding-right: rem(22px, 12px);
+      padding-right: 1.8rem;
+      @include for-desktop-up {
+        padding-right: 2.5rem;
+      }
       &:after {
         content: ' ';
         position: absolute;
@@ -27,9 +37,12 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        // background-image: url('assets/images/yandex_home@1x.png');
-        // background-image: url('assets/images/yandex_home@2x.png');
         background-image: url('assets/images/svg/cloud-drizzle.svg');
+        @include for-desktop-up {
+          top: 0.6rem;
+          width: 2.17rem;
+          height: 2.17rem;
+        }
       }
     }
   }

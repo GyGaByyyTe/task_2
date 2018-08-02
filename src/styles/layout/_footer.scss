@@ -5,31 +5,55 @@
   flex: 0 0 auto;
   text-align: center;
 
+  @include for-desktop-up {
+    display: flex;
+    background-color: transparent;
+    padding: 1.83rem 3.33rem 2.25rem 3.33rem;
+  }
+
   &__list {
-    max-width: rem(300px,12px);
-    width: 70%;
-    margin: 0 auto;
     font-size: 14px;
-    color: $color__black;
+    // color: $color__black;
+
+    @include for-phone-only {
+      max-width: rem(300px, 12px);
+      width: 70%;
+      margin: 0 auto;
+    }
   }
 
   &__item {
-    border: 1px solid $color__dark--light;
-    border-radius: 3px;
-    margin-bottom: 0.5rem;
+    display: inline-block;
+    margin-right: 1rem;
     &:last-child {
-      margin-bottom: 0;
+      margin-right: 0;
+    }
+
+    @include for-phone-only {
+      display: list-item;
+      border: 1px solid $color__dark--light;
+      border-radius: 3px;
+      margin-bottom: 0.5rem;
+      margin-right: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
   &__link {
-    padding: 1rem;
     display: block;
+    @include for-phone-only {
+      padding: 1rem;
+    }
   }
 
   &__copyright {
-    margin-top: 1rem;
-    text-align: center;
+    margin-left: auto;
     font-size: 15px;
+    @include for-phone-only {
+      margin-top: 1rem;
+      text-align: center;
+    }
   }
 }

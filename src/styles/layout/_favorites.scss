@@ -1,19 +1,55 @@
 .favorites {
   width: 100%;
-  margin-top: 2.58rem;
+  padding-top: 2rem;
   overflow: hidden;
   white-space: nowrap;
 
+  @include for-desktop-up {
+    width: 50.7%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 2.17rem 3.33rem 0 0;
+  }
+
+  &--devices {
+    width: 100%;
+    @include for-desktop-up {
+      margin-bottom: 0;
+    }
+  }
+
+  &__header {
+    padding: 0 1.67rem;
+    margin-bottom: 1.67rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--devices {
+      @include for-desktop-up {
+        padding-left: 3.33rem;
+        display: block;
+      }
+    }
+  }
+
   &__title {
+    display: inline-block;
     font-weight: bold;
     font-size: 18px;
     color: $color__dark;
-    padding-left: 1.67rem;
-    margin-bottom: 1.67rem;
+  }
+
+  &__types {
+    display: inline-block;
+    position: relative;
   }
 
   &__scripts {
     overflow: hidden;
     white-space: nowrap;
+    @include for-desktop-up {
+      overflow: visible;
+    }
   }
 }

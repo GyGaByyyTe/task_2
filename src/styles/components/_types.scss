@@ -1,0 +1,54 @@
+.types {
+  @include for-desktop-up {
+    display: inline-block;
+    margin-left: 1.08rem;
+  }
+
+  &:hover {
+    .types__list {
+      left: 0;
+    }
+  }
+
+  &__item {
+    border-radius: 20px;
+    font-weight: 800;
+    padding: 0.58rem 1.25rem;
+    @include for-desktop-up {
+      display: inline-block;
+      margin-right: 0.83rem;
+      background-color: $color__gray;
+    }
+
+    &--active {
+      display: inline-block;
+      background: $color__yellow url('assets/images/arrow-down.png') right 10px
+        center no-repeat;
+      background-size: 15px;
+      width: 5.92rem;
+      color: $color__black;
+      font-size: 13px;
+      // padding: 0.58rem 0 0.67rem 1.33rem;
+
+      @include for-desktop-up {
+        background-image: none;
+        width: auto;
+      }
+    }
+  }
+
+  &__current {
+    display: inline-block;
+    position: relative;
+  }
+
+  &__list {
+    position: absolute;
+    left: 9999px;
+
+    @include for-desktop-up {
+      display: inline-block;
+      position: static;
+    }
+  }
+}

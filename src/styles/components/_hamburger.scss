@@ -1,8 +1,12 @@
 .hamburger {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  z-index: 10;
+  display: none;
+
+  @include for-phone-only {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 10;
+  }
 }
 .hamburger__line {
   position: absolute;
@@ -12,7 +16,7 @@
   width: 100%;
   background-color: rgba($color: $color__dark, $alpha: 0.9);
   border-radius: 3px;
-  transform: translateY(-65%)
+  transform: translateY(-50%);
 }
 .hamburger__link {
   position: relative;
@@ -70,9 +74,9 @@
       content: ' ';
       background-color: rgba($color: $color__dark, $alpha: 0.9);
       transform: rotate(-45deg);
-      @include for-phone-only {
-        bottom: -23%;
-      }
+      // @include for-phone-only {
+      //   bottom: -23%;
+      // }
     }
   }
 }

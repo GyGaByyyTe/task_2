@@ -3,8 +3,13 @@
   height: 100%;
   overflow: auto;
 
-  &::-webkit-scrollbar {
-    display: none;
+  &--favorite {
+    @include for-desktop-up {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 1.67rem;
+      overflow: visible;
+    }
   }
 
   &__item {
@@ -17,8 +22,37 @@
     border-radius: 20px;
     padding: 1.25rem 1.25rem 1.17rem;
 
+    @include for-desktop-up {
+      display: flex;
+      margin: 1.67rem 1.67rem 1.25rem;
+    }
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      background-color: $color__white;
+      cursor: pointer;
+    }
+
     &--favorite {
       height: 8.33rem;
+      @include for-desktop-up {
+        margin-right: 0;
+        margin-top: 0;
+        margin-left: 1.25rem;
+        margin-bottom: 1.25rem;
+        &:nth-child(3n + 1) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &--device {
+      @include for-desktop-up {
+        margin-left: 3.33rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        display: inline-flex;
+      }
     }
   }
 
@@ -58,7 +92,7 @@
     letter-spacing: 0;
     text-align: left;
     margin-bottom: 0.34rem;
-    white-space: initial;
+    white-space: normal;
   }
 
   &__encounter {
