@@ -8,12 +8,11 @@
   @include for-desktop-up {
     display: flex;
     background-color: transparent;
-    padding: 1.83rem 3.33rem 2.25rem 3.33rem;
+    padding: 0.4rem 3.33rem 2.25rem 3.33rem;
   }
 
   &__list {
     font-size: 14px;
-    // color: $color__black;
 
     @include for-phone-only {
       max-width: rem(300px, 12px);

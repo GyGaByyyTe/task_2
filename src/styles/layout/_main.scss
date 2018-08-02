@@ -1,9 +1,11 @@
 .main {
+  margin-bottom: 2.58rem;
   @include for-desktop-up {
     width: 49%;
     display: inline-block;
     vertical-align: top;
     padding-right: 0;
+    margin-bottom: 0;
   }
 
   &__header {
@@ -25,14 +27,12 @@
     background-position: center;
     background-size: cover;
     background-image: url('assets/images/bg@1x.png');
-    padding-bottom: 1.67rem;
     margin-top: 5.33rem;
     overflow: hidden;
 
     @include for-desktop-up {
       display: flex;
       max-height: 27.58rem;
-      padding-bottom: 0;
       margin-bottom: 0;
       margin-top: 0.3rem;
       background-image: url('assets/images/bg@2x.png');

@@ -14,6 +14,7 @@
     border-radius: 20px;
     font-weight: 800;
     padding: 0.58rem 1.25rem;
+    cursor: pointer;
     @include for-desktop-up {
       display: inline-block;
       margin-right: 0.83rem;

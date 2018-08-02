@@ -1,6 +1,5 @@
 .favorites {
   width: 100%;
-  padding-top: 2rem;
   overflow: hidden;
   white-space: nowrap;
 
@@ -15,12 +14,12 @@
     width: 100%;
     @include for-desktop-up {
       margin-bottom: 0;
+      padding-top: 2.42rem;
     }
   }
 
   &__header {
     padding: 0 1.67rem;
-    margin-bottom: 1.67rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

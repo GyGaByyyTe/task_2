@@ -85,9 +85,6 @@ a {
 .content {
   position: relative;
   flex: 1 0 auto;
-  @include for-phone-only {
-    padding-bottom: 1rem;
-  }
 }
 .container {
   width: 100%;
