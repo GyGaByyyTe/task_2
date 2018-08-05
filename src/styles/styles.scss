@@ -13,6 +13,7 @@
 @import "layout/footer";
 @import "layout/main";
 @import "layout/favorites";
+@import "layout/overlay";
 
 //Ипортируем Стили отдельных компонентов
 @import 'components/logo';
@@ -21,6 +22,7 @@
 @import 'components/weather';
 @import 'components/scripts';
 @import 'components/types';
+@import 'components/slider';
 
 //Ипортируем Персональные стили для страниц
 // @import 'pages/home';

@@ -26,7 +26,7 @@
       background: $color__yellow url('assets/images/arrow-down.png') right 10px
         center no-repeat;
       background-size: 15px;
-      width: 5.92rem;
+      padding-right: rem(28px);
       color: $color__black;
       font-size: 13px;
 
@@ -34,6 +34,10 @@
         background-image: none;
         width: auto;
       }
+    }
+
+    &--overlay {
+      font-weight: 400;
     }
   }
 

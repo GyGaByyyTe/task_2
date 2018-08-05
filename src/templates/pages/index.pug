@@ -145,3 +145,22 @@ block content
                 li.footer__item
                     a(href="#").footer__link Условия использования
             .footer__copyright &copy; 2001-2018 OOO "Яндекс"
+        .overlay.container#lamp 
+            .overlay__content
+                .overlay__header
+                    .overlay__text
+                        .overlay__title Xiaomi Yeelight LED Smart Bulb
+                        .overlay__status Включится в 17:00
+                    .overlay__logo
+                .overlay__types
+                    .types 
+                        span.types__item.types__item--overlay.types__item--active Вручную
+                        ul.types__list.types__list--overlay
+                            li.types__item.types__item--overlay Дневной свет
+                            li.types__item.types__item--overlay Вечерний свет
+                            li.types__item.types__item--overlay Рассвет
+                .overlay__slider
+                    input(type="range" min="1" max="100" value="50").slider.slider--vertical       
+            .overlay__control
+                .overlay__button.overlay__button--apply Применить
+                .overlay__button.overlay__button--close Закрыть           

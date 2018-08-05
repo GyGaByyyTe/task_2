@@ -20,6 +20,10 @@ const paths = {
     src: 'src/styles/**/*.scss',
     dest: 'build/'
   },
+  scripts: {
+    src: 'src/scripts/**/*.js',
+    dest: 'build/'
+  },
   images: {
     src: 'src/images/**/*.*',
     dest: 'build/assets/images/'
@@ -70,6 +74,7 @@ function watch() {
   gulp.watch(paths.templates.src, templates);
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.images.src, images);
+  gulp.watch(paths.scripts.src, scripts);
 }
 
 // локальный сервер + livereload (встроенный)
@@ -84,6 +89,10 @@ function server() {
 function images() {
   return gulp.src(paths.images.src).pipe(gulp.dest(paths.images.dest));
 }
+// просто переносим скрипты
+function scripts() {
+  return gulp.src(paths.scripts.src).pipe(gulp.dest(paths.scripts.dest));
+}
 
 // просто переносим шрифты
 function fonts() {
@@ -95,6 +104,7 @@ exports.styles = styles;
 exports.fonts = fonts;
 exports.clean = clean;
 exports.images = images;
+exports.scripts = scripts;
 
 gulp.task('css', gulp.series(clean, styles));
 
@@ -102,7 +112,7 @@ gulp.task(
   'default',
   gulp.series(
     clean,
-    gulp.parallel(styles, templates, fonts, images),
+    gulp.parallel(styles, templates, fonts, images, scripts),
     gulp.parallel(watch, server)
   )
 );
