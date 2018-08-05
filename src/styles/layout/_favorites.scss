@@ -45,10 +45,8 @@
   }
 
   &__scripts {
-    overflow: hidden;
+    // overflow-x: scroll;
+    // overflow-y: visible;
     white-space: nowrap;
-    @include for-desktop-up {
-      overflow: visible;
-    }
   }
 }

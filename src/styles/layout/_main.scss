@@ -65,7 +65,8 @@
 
   &__scripts {
     margin-top: 1.67rem;
-    overflow: hidden;
+    // overflow-x: scroll;
+    // overflow-y: visible;
     white-space: nowrap;
     @include for-desktop-up {
       margin: 0 0 0 auto;

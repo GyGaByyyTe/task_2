@@ -38,43 +38,49 @@ block content
                                     .weather__title За окном
                                     .weather__status.weather__status--rain +19     
                     .main__scripts
-                        ul.scripts
-                            li.scripts__item
-                                .scripts__logo.scripts__logo--temperature_off            
-                                .scripts__title Phillips Cooler             
-                                .scripts__encounter Начнет охлаждать в 16:30 
-                            li.scripts__item
-                                .scripts__logo.scripts__logo--light_off            
-                                .scripts__title Xiaomi Yeelight LED Smart Bulb             
-                                .scripts__encounter Включится в 17:00         
-                            li.scripts__item
-                                .scripts__logo.scripts__logo--sheduled           
-                                .scripts__title Я ухожу         
-                            li.scripts__item
-                                .scripts__logo.scripts__logo--light_on            
-                                .scripts__title Xiaomi Yeelight LED Smart Bulb 2             
-                                .scripts__encounter Включится в 17:00                                        
+                        .scripts
+                            ul.scripts__list
+                                li.scripts__item
+                                    .scripts__logo.scripts__logo--temperature_off            
+                                    .scripts__title Phillips Cooler             
+                                    .scripts__encounter Начнет охлаждать в 16:30 
+                                li.scripts__item
+                                    .scripts__logo.scripts__logo--light_off            
+                                    .scripts__title Xiaomi Yeelight LED Smart Bulb             
+                                    .scripts__encounter Включится в 17:00         
+                                li.scripts__item
+                                    .scripts__logo.scripts__logo--sheduled           
+                                    .scripts__title Я ухожу         
+                                li.scripts__item
+                                    .scripts__logo.scripts__logo--light_on            
+                                    .scripts__title Xiaomi Yeelight LED Smart Bulb 2             
+                                    .scripts__encounter Выключится в 17:00       
+                                li.scripts__item
+                                    .scripts__logo.scripts__logo--temperature_on            
+                                    .scripts__title Xiaomi Termometer LED Smart            
+                                    .scripts__encounter Включено                                                                     
             section.favorites
                 .favorites__header            
                     h4.favorites__title Избранные сценарии          
                 .favorites__scripts
-                    ul.scripts.scripts--favorite
-                        li.scripts__item.scripts__item--favorite
-                            .scripts__logo.scripts__logo--light_on            
-                            .scripts__title Выключить весь свет в доме и во дворе             
-                        li.scripts__item.scripts__item--favorite
-                            .scripts__logo.scripts__logo--sheduled            
-                            .scripts__title Я ухожу                 
-                        li.scripts__item.scripts__item--favorite
-                            .scripts__logo.scripts__logo--light_on           
-                            .scripts__title Включить свет в коридоре   
-                        li.scripts__item.scripts__item--favorite
-                            .scripts__logo.scripts__logo--temperature_on           
-                            .scripts__title Набрать горячую ванну
-                            .scripts__encounter Начнется в 18:00     
-                        li.scripts__item.scripts__item--favorite
-                            .scripts__logo.scripts__logo--temperature_on           
-                            .scripts__title Сделать пол тёплым во всей квартире    
+                    .scripts
+                        ul.scripts__list.scripts__list--favorite
+                            li.scripts__item.scripts__item--favorite
+                                .scripts__logo.scripts__logo--light_on            
+                                .scripts__title Выключить весь свет в доме и во дворе             
+                            li.scripts__item.scripts__item--favorite
+                                .scripts__logo.scripts__logo--sheduled            
+                                .scripts__title Я ухожу                 
+                            li.scripts__item.scripts__item--favorite
+                                .scripts__logo.scripts__logo--light_on           
+                                .scripts__title Включить свет в коридоре   
+                            li.scripts__item.scripts__item--favorite
+                                .scripts__logo.scripts__logo--temperature_on           
+                                .scripts__title Набрать горячую ванну
+                                .scripts__encounter Начнется в 18:00     
+                            li.scripts__item.scripts__item--favorite
+                                .scripts__logo.scripts__logo--temperature_on           
+                                .scripts__title Сделать пол тёплым во всей квартире    
 
             section.favorites.favorites--devices
                 .favorites__header.favorites__header--devices
@@ -89,31 +95,44 @@ block content
                                 li.types__item Камеры                            
                         ul.types__list.types__list--hide      
                 .favorites__scripts
-                    ul.scripts
-                        li.scripts__item.scripts__item--device
-                            .scripts__logo.scripts__logo--light_on            
-                            .scripts__title Xiaomi Yeelight LED Smart Bulb    
-                            .scripts__encounter Включено            
-                        li.scripts__item.scripts__item--device
-                            .scripts__logo.scripts__logo--light_off          
-                            .scripts__title D-Link Omna 180 Cam        
-                            .scripts__encounter Включится в 17:00         
-                        li.scripts__item.scripts__item--device
-                            .scripts__logo.scripts__logo--temperature_off        
-                            .scripts__title Elgato Eve Degree Connected  
-                            .scripts__encounter Выключено до 17:00     
-                        li.scripts__item.scripts__item--device
-                            .scripts__logo.scripts__logo--light_off          
-                            .scripts__title LIFX Mini Day &amp; Dusk A60 E27
-                            .scripts__encounter Включится в 17:00      
-                        li.scripts__item.scripts__item--device
-                            .scripts__logo.scripts__logo--light_on           
-                            .scripts__title Xiaomi Mi Air Purifier 2S  
-                            .scripts__encounter Включено             
-                        li.scripts__item.scripts__item--device
-                            .scripts__logo.scripts__logo--light_on           
-                            .scripts__title Xiaomi Mi Air Purifier 2S  
-                            .scripts__encounter Включено                                                                                                         
+                    .scripts
+                        ul.scripts__list
+                            li.scripts__item.scripts__item--device
+                                .scripts__logo.scripts__logo--light_on            
+                                .scripts__title Xiaomi Yeelight LED Smart Bulb    
+                                .scripts__encounter Включено            
+                            li.scripts__item.scripts__item--device
+                                .scripts__logo.scripts__logo--light_off          
+                                .scripts__title D-Link Omna 180 Cam        
+                                .scripts__encounter Включится в 17:00         
+                            li.scripts__item.scripts__item--device
+                                .scripts__logo.scripts__logo--temperature_off        
+                                .scripts__title Elgato Eve Degree Connected  
+                                .scripts__encounter Выключено до 17:00     
+                            li.scripts__item.scripts__item--device
+                                .scripts__logo.scripts__logo--light_off          
+                                .scripts__title LIFX Mini Day &amp; Dusk A60 E27
+                                .scripts__encounter Включится в 17:00      
+                            li.scripts__item.scripts__item--device
+                                .scripts__logo.scripts__logo--light_on           
+                                .scripts__title Xiaomi Mi Air Purifier 2S  
+                                .scripts__encounter Включено             
+                            li.scripts__item.scripts__item--device
+                                .scripts__logo.scripts__logo--light_on           
+                                .scripts__title Xiaomi Mi Air Purifier 2S  
+                                .scripts__encounter Включено        
+                            li.scripts__item.scripts__item--device
+                                .scripts__logo.scripts__logo--light_on           
+                                .scripts__title Xiaomi Mi Air Purifier 2S  
+                                .scripts__encounter Включено     
+                            li.scripts__item.scripts__item--device
+                                .scripts__logo.scripts__logo--light_on           
+                                .scripts__title Xiaomi Mi Air Purifier 2S  
+                                .scripts__encounter Включено     
+                            li.scripts__item.scripts__item--device
+                                .scripts__logo.scripts__logo--light_on           
+                                .scripts__title Xiaomi Mi Air Purifier 2S  
+                                .scripts__encounter Включено                                                                                                                                                                                          
                                                                                       
         footer.footer
             ul.footer__list
