@@ -4,7 +4,7 @@ block variables
     - var title = 'Яндекс Дом'
 
 block content
-    .wrapper
+    .wrapper.wrapper--blur#wrapper
         .content.content--blur#content
             header.header.container
                 .header__left
@@ -160,7 +160,7 @@ block content
                             li.types__item.types__item--overlay Вечерний свет
                             li.types__item.types__item--overlay Рассвет
                 .overlay__slider
-                    input(type="range" min="1" max="100" value="50").slider.slider--vertical       
+                    input(type="range" min="1" max="100" value="65").slider.slider--lamp  
             .overlay__control
                 .overlay__button.overlay__button--apply Применить
                 .overlay__button.overlay__button--close Закрыть        
@@ -177,8 +177,26 @@ block content
                         ul.types__list.types__list--overlay
                             li.types__item.types__item--overlay Холодно
                             li.types__item.types__item--overlay Тепло                        
+                            li.types__item.types__item--overlay Жарко                        
                 .overlay__slider
-                    input(type="range" min="1" max="100" value="50").slider.slider--vertical.slider--temperature       
+                    input(type="range" min="1" max="100" value="65").slider.slider--temperature       
             .overlay__control
                 .overlay__button.overlay__button--apply Применить
-                .overlay__button.overlay__button--close Закрыть                       
+                .overlay__button.overlay__button--close Закрыть             
+        .overlay.container#termostate 
+            .overlay__content
+                .overlay__header
+                    .overlay__text
+                        .overlay__title Xiaomi Warm Floor
+                        .overlay__status Включено
+                    .overlay__logo                    
+                .overlay__regulator
+                    .regulator#regulator
+                        input(type="range" min="17" max="27" value="23").regulator__input    
+                        .regulator__indicator#indicator
+                        .regulator__text +23
+            .overlay__control
+                .overlay__button.overlay__button--apply Применить        
+                .overlay__button.overlay__button--close Закрыть             
+
+                                   

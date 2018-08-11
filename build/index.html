@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles.min.css">
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper wrapper--blur" id="wrapper">
       <div class="content content--blur" id="content">
         <header class="header container">
           <div class="header__left"><a class="logo" href="#"></a></div>
@@ -207,7 +207,7 @@
             </div>
           </div>
           <div class="overlay__slider">
-            <input class="slider slider--vertical" type="range" min="1" max="100" value="50">
+            <input class="slider slider--lamp" type="range" min="1" max="100" value="65">
           </div>
         </div>
         <div class="overlay__control">
@@ -229,19 +229,43 @@
               <ul class="types__list types__list--overlay">
                 <li class="types__item types__item--overlay">Холодно</li>
                 <li class="types__item types__item--overlay">Тепло                        </li>
+                <li class="types__item types__item--overlay">Жарко                        </li>
               </ul>
             </div>
           </div>
           <div class="overlay__slider">
-            <input class="slider slider--vertical slider--temperature" type="range" min="1" max="100" value="50">
+            <input class="slider slider--temperature" type="range" min="1" max="100" value="65">
           </div>
         </div>
         <div class="overlay__control">
           <div class="overlay__button overlay__button--apply">Применить</div>
-          <div class="overlay__button overlay__button--close">Закрыть                       </div>
+          <div class="overlay__button overlay__button--close">Закрыть             </div>
+        </div>
+      </div>
+      <div class="overlay container" id="termostate"> 
+        <div class="overlay__content">
+          <div class="overlay__header">
+            <div class="overlay__text">
+              <div class="overlay__title">Xiaomi Warm Floor</div>
+              <div class="overlay__status">Включено</div>
+            </div>
+            <div class="overlay__logo">                   </div>
+          </div>
+          <div class="overlay__regulator">
+            <div class="regulator" id="regulator">
+              <input class="regulator__input" type="range" min="17" max="27" value="23">
+              <div class="regulator__indicator" id="indicator"></div>
+              <div class="regulator__text">+23</div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay__control">
+          <div class="overlay__button overlay__button--apply">Применить        </div>
+          <div class="overlay__button overlay__button--close">Закрыть             </div>
         </div>
       </div>
     </div>
   </body>
   <script src="./app.js" defer></script>
+  <script src="./regulator.js" defer></script>
 </html>

@@ -17,19 +17,22 @@ document.addEventListener(
       }
     };
 
-    window.addEventListener(
-      'resize',
-      function() {
-        setSliderWidth();
-      },
-      true
-    );
+    if (window.width >= 1280) {
+      window.addEventListener(
+        'resize',
+        function() {
+          setSliderWidth();
+        },
+        true
+      );
 
-    setSliderWidth();
+      setSliderWidth();
+    }
 
     var overlayButtons = document.getElementsByClassName('overlay__button');
     var overlays = document.getElementsByClassName('overlay');
     var contentBlock = document.getElementById('content');
+    var wrapperBlock = document.getElementById('wrapper');
 
     for (var i = 0; i < overlayButtons.length; i++) {
       overlayButtons[i].addEventListener('click', function(ev) {
@@ -38,6 +41,7 @@ document.addEventListener(
           overlays[j].style.display = 'none';
         }
         contentBlock.classList.toggle('content--blur');
+        wrapperBlock.classList.toggle('wrapper--blur');
       });
     }
   },
