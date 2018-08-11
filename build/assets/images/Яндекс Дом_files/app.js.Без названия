@@ -7,13 +7,14 @@ document.addEventListener(
     var setSliderWidth = function() {
       for (var i = 0; i < sliders.length; i++) {
         var paddingTop = parseInt(
-          getComputedStyle(overlay__slider[i]).paddingTop
+          getComputedStyle(overlay__slider[0]).paddingTop
         );
         var paddingBottom = parseInt(
-          getComputedStyle(overlay__slider[i]).paddingBottom
+          getComputedStyle(overlay__slider[0]).paddingBottom
         );
+        console.log(overlay__slider[0].clientHeight);
         sliders[i].style.width =
-          overlay__slider[i].clientHeight - (paddingTop + paddingBottom) + 'px';
+          overlay__slider[0].clientHeight - (paddingTop + paddingBottom) + 'px';
       }
     };
 

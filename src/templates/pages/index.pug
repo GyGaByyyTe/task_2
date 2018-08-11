@@ -5,7 +5,7 @@ block variables
 
 block content
     .wrapper
-        .content
+        .content.content--blur#content
             header.header.container
                 .header__left
                     a(href="#").logo
@@ -153,7 +153,7 @@ block content
                         .overlay__status Включится в 17:00
                     .overlay__logo
                 .overlay__types
-                    .types 
+                    .types.types--overlay 
                         span.types__item.types__item--overlay.types__item--active Вручную
                         ul.types__list.types__list--overlay
                             li.types__item.types__item--overlay Дневной свет
@@ -163,4 +163,22 @@ block content
                     input(type="range" min="1" max="100" value="50").slider.slider--vertical       
             .overlay__control
                 .overlay__button.overlay__button--apply Применить
-                .overlay__button.overlay__button--close Закрыть           
+                .overlay__button.overlay__button--close Закрыть        
+        .overlay.container#temperature 
+            .overlay__content
+                .overlay__header
+                    .overlay__text
+                        .overlay__title Elgato Eve Degree Connected
+                        .overlay__status Включено
+                    .overlay__logo
+                .overlay__types
+                    .types.types--overlay 
+                        span.types__item.types__item--overlay.types__item--active Вручную
+                        ul.types__list.types__list--overlay
+                            li.types__item.types__item--overlay Холодно
+                            li.types__item.types__item--overlay Тепло                        
+                .overlay__slider
+                    input(type="range" min="1" max="100" value="50").slider.slider--vertical.slider--temperature       
+            .overlay__control
+                .overlay__button.overlay__button--apply Применить
+                .overlay__button.overlay__button--close Закрыть                       

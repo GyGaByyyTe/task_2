@@ -84,14 +84,14 @@ a {
   height: 100%;
   width: 100%;
   overflow: hidden;
-
-
 }
 .content {
   position: relative;
   flex: 1 0 auto;
-  
-  filter: blur(3px);
+
+  &--blur {
+    filter: blur(3px);
+  }
 }
 .container {
   width: 100%;
@@ -101,4 +101,10 @@ a {
   @include for-desktop-up {
     padding: 2.17rem 3.33rem 0;
   }
+}
+#lamp {
+  display: none;
+}
+#temperature {
+  // display: none;
 }

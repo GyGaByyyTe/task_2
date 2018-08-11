@@ -4,6 +4,11 @@
     margin-left: 1.08rem;
   }
 
+  &--overlay {
+    overflow: auto;
+    white-space: nowrap;
+  }
+
   &:hover {
     .types__list {
       left: 0;
@@ -38,6 +43,17 @@
 
     &--overlay {
       font-weight: 400;
+      display: inline-block;
+      background-color: $color__gray;
+      background-image: none;
+      &:last-child {
+        margin-right: 1.67rem;
+      }
+    }
+
+    &--active.types__item--overlay {
+      background-color: $color__yellow;
+      padding-right: 1.25rem;
     }
   }
 
@@ -50,6 +66,7 @@
     position: absolute;
     left: 9999px;
     z-index: 10;
+
     @include for-phone-only {
       background-color: $color__yellow;
     }
@@ -57,6 +74,12 @@
     @include for-desktop-up {
       display: inline-block;
       position: static;
+    }
+
+    &--overlay {
+      display: inline-block;
+      position: static;
+      background-color: transparent;
     }
   }
 }
