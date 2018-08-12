@@ -6,10 +6,12 @@ $menu__padding: 1.5rem;
     z-index: 20;
     left: $menu__padding;
     right: $menu__padding;
-    top: -110%;
+    top: -200%;
     will-change: top;
     background-color: $color__yellow;
     border-radius: 10px;
+    text-align: left;
+    padding: 1rem;
   }
 
   @include transition;
@@ -25,7 +27,7 @@ $menu__padding: 1.5rem;
     color: $color__dark--light;
     display: inline-block;
     margin-right: 2.33rem;
-    
+
     @include for-phone-only {
       display: list-item;
       margin-right: 0;

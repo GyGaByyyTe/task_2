@@ -84,6 +84,22 @@ a {
   &--blur {
     height: 100%;
     position: fixed;
+    &:before {
+      content: ' ';
+      position: absolute;
+      z-index: 10;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background-color: rgba(51, 51, 51, 0.5);
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
   }
 }
 .content {
@@ -103,38 +119,19 @@ a {
     padding: 2.17rem 3.33rem 0;
   }
 }
-#lamp {
-  display: none;
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-#temperature {
-  display: none;
-}
-#termostate {
-  display: none;
-}
-
-.css {
-  position: absolute;
-  background: #6495c4;
-  width: 30px;
-  height: 30px;
-  left: 70px;
-  top: 40px;
-  border: 3px solid #fff;
-  cursor: pointer;
-  border-radius: 19px;
-  -webkit-border-radius: 19px;
-  -moz-border-radius: 19px;
-}
-#round {
-  position: absolute;
-  left: 50%;
-  margin-left: -250px;
-  top: 100px;
-  width: 500px;
-  height: 500px;
-  border: 5px solid #6495c4;
-  border-radius: 250px;
-  -webkit-border-radius: 250px;
-  -moz-border-radius: 250px;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
