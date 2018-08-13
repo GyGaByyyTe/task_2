@@ -1,5 +1,7 @@
 var sliderScriptInit = function() {
-  var pages = document.querySelectorAll('.scripts__page');
+  var pages = document
+    .querySelector('.favorites')
+    .querySelectorAll('.scripts__page');
 
   var slideNow = 1;
   var slideCount = pages.length;

@@ -17,6 +17,10 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-image: url('assets/images/svg/arrow_left.svg');
+      opacity: 0.5;
+      &--active {
+        opacity: 1;
+      }
     }
     &__next {
       @extend .scripts__prev;
