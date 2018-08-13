@@ -5,6 +5,7 @@
 
   @include for-desktop-up {
     &__prev {
+      cursor: pointer;
       position: absolute;
       top: -1.6rem;
       right: 2.5rem;

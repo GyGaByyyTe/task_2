@@ -30,7 +30,7 @@ document.addEventListener(
     function resize() {
       if (window.width >= 1280) {
         setSliderWidth();
-        // updateSlide();
+        updateSlide();
       }
     }
     window.addEventListener('resize', resize, true);
