@@ -72,8 +72,9 @@ document.addEventListener(
       contentBlock.classList.toggle('content--blur');
       wrapperBlock.classList.toggle('wrapper--blur');
       if (type === 'termostate') {
-        console.log(type);
-        overlayBlock.addEventListener('animationend', regulatorInit);
+        overlayBlock.addEventListener('animationend', function() {
+          regulatorInit(559);
+        });
       } else {
         if (window.width >= 1280) {
           setSliderWidth();
@@ -102,6 +103,9 @@ document.addEventListener(
         clickScript('termostate', this);
       });
     }
+
+    //слайды из скриптов
+    sliderScriptInit();
   },
   false
 );

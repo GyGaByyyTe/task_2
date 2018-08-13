@@ -64,6 +64,8 @@ block content
                     h4.favorites__title Избранные сценарии          
                 .favorites__scripts
                     .scripts.scripts--favorite
+                        .scripts__prev
+                        .scripts__next
                         .scripts__pages
                             .scripts__page
                                 ul.scripts__list.scripts__list--favorite
@@ -128,43 +130,49 @@ block content
                         ul.types__list.types__list--hide      
                 .favorites__scripts
                     .scripts.scripts--devices
-                        ul.scripts__list
-                            li.scripts__item.scripts__item--device.bulb
-                                .scripts__logo.scripts__logo--light_on            
-                                .scripts__title Xiaomi Yeelight LED Smart Bulb    
-                                .scripts__encounter Включено            
-                            li.scripts__item.scripts__item--device.bulb
-                                .scripts__logo.scripts__logo--light_off          
-                                .scripts__title D-Link Omna 180 Cam        
-                                .scripts__encounter Включится в 17:00         
-                            li.scripts__item.scripts__item--device.termostate
-                                .scripts__logo.scripts__logo--temperature_off        
-                                .scripts__title Elgato Eve Degree Connected  
-                                .scripts__encounter Выключено до 17:00     
-                            li.scripts__item.scripts__item--device.bulb
-                                .scripts__logo.scripts__logo--light_off          
-                                .scripts__title LIFX Mini Day &amp; Dusk A60 E27
-                                .scripts__encounter Включится в 17:00      
-                            li.scripts__item.scripts__item--device.temperature
-                                .scripts__logo.scripts__logo--light_on           
-                                .scripts__title Xiaomi Mi Air Purifier 2S  
-                                .scripts__encounter Включено             
-                            li.scripts__item.scripts__item--device.temperature
-                                .scripts__logo.scripts__logo--light_on           
-                                .scripts__title Xiaomi Mi Air Purifier 2S  
-                                .scripts__encounter Включено        
-                            li.scripts__item.scripts__item--device.temperature
-                                .scripts__logo.scripts__logo--light_on           
-                                .scripts__title Xiaomi Mi Air Purifier 2S  
-                                .scripts__encounter Включено     
-                            li.scripts__item.scripts__item--device.temperature
-                                .scripts__logo.scripts__logo--light_on           
-                                .scripts__title Xiaomi Mi Air Purifier 2S  
-                                .scripts__encounter Включено     
-                            li.scripts__item.scripts__item--device.temperature
-                                .scripts__logo.scripts__logo--light_on           
-                                .scripts__title Xiaomi Mi Air Purifier 2S  
-                                .scripts__encounter Включено                                                                                                                                                                                          
+                        .scripts__prev
+                        .scripts__next
+                        .scripts__pages
+                            .scripts__page                        
+                                ul.scripts__list
+                                    li.scripts__item.scripts__item--device.bulb
+                                        .scripts__logo.scripts__logo--light_on            
+                                        .scripts__title Xiaomi Yeelight LED Smart Bulb    
+                                        .scripts__encounter Включено            
+                                    li.scripts__item.scripts__item--device.bulb
+                                        .scripts__logo.scripts__logo--light_off          
+                                        .scripts__title D-Link Omna 180 Cam        
+                                        .scripts__encounter Включится в 17:00         
+                                    li.scripts__item.scripts__item--device.termostate
+                                        .scripts__logo.scripts__logo--temperature_off        
+                                        .scripts__title Elgato Eve Degree Connected  
+                                        .scripts__encounter Выключено до 17:00     
+                                    li.scripts__item.scripts__item--device.bulb
+                                        .scripts__logo.scripts__logo--light_off          
+                                        .scripts__title LIFX Mini Day &amp; Dusk A60 E27
+                                        .scripts__encounter Включится в 17:00      
+                            .scripts__page                        
+                                ul.scripts__list                                    
+                                    li.scripts__item.scripts__item--device.temperature
+                                        .scripts__logo.scripts__logo--light_on           
+                                        .scripts__title Xiaomi Mi Air Purifier 2S  
+                                        .scripts__encounter Включено             
+                                    li.scripts__item.scripts__item--device.temperature
+                                        .scripts__logo.scripts__logo--light_on           
+                                        .scripts__title Xiaomi Mi Air Purifier 2S  
+                                        .scripts__encounter Включено        
+                                    li.scripts__item.scripts__item--device.temperature
+                                        .scripts__logo.scripts__logo--light_on           
+                                        .scripts__title Xiaomi Mi Air Purifier 2S  
+                                        .scripts__encounter Включено     
+                                    li.scripts__item.scripts__item--device.temperature
+                                        .scripts__logo.scripts__logo--light_on           
+                                        .scripts__title Xiaomi Mi Air Purifier 2S  
+                                        .scripts__encounter Включено     
+                                    li.scripts__item.scripts__item--device.temperature
+                                        .scripts__logo.scripts__logo--light_on           
+                                        .scripts__title Xiaomi Mi Air Purifier 2S  
+                                        .scripts__encounter Включено                                                                                                                                                                                          
                                                                                       
         footer.footer
             ul.footer__list
@@ -221,7 +229,7 @@ block content
                     .overlay__text
                         .overlay__title Xiaomi Warm Floor
                         .overlay__status Включено
-                    .overlay__logo                    
+                    .overlay__logo.                    
                 .overlay__regulator
                     .regulator#regulator
                         input(type="range" min="17" max="27" value="23").regulator__input    
