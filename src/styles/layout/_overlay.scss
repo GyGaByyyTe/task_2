@@ -28,6 +28,12 @@
     justify-content: center;
   }
 
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__content {
     background-color: $color__white;
     border-radius: 20px;
@@ -58,6 +64,7 @@
   }
 
   &__logo {
+    display: inline-block;
     @include for-phone-only {
       display: none;
     }

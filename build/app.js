@@ -22,21 +22,26 @@ document.addEventListener(
         var paddingBottom = parseInt(
           getComputedStyle(overlay__slider[i]).paddingBottom
         );
-        sliders[i].style.width =
-          overlay__slider[i].clientHeight - (paddingTop + paddingBottom) + 'px';
+        if (window.innerWidth < 1280) {
+          sliders[i].style.width =
+            overlay__slider[i].clientHeight -
+            (paddingTop + paddingBottom) +
+            'px';
+        } else {
+          sliders[i].style.width = '100%';
+        }
       }
     };
 
     function resize() {
-      if (window.width >= 1280) {
-        setSliderWidth();
+      if (window.innerWidth >= 1280) {
         updateSlide();
       }
-    }
-    window.addEventListener('resize', resize, true);
-    if (window.width >= 1280) {
       setSliderWidth();
     }
+    window.addEventListener('resize', resize);
+
+    setSliderWidth();
 
     // открытие сценария на весь экран
 
@@ -76,7 +81,7 @@ document.addEventListener(
           regulatorInit(559);
         });
       } else {
-        if (window.width >= 1280) {
+        if (window.innerWidth < 1280) {
           setSliderWidth();
         }
       }
@@ -103,9 +108,6 @@ document.addEventListener(
         clickScript('termostate', this);
       });
     }
-
-    //слайды из скриптов
-    sliderScriptInit();
   },
   false
 );

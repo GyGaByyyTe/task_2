@@ -1,10 +1,8 @@
 .slider {
-  -webkit-appearance: none;
+  position: relative;
   width: 100%;
   height: 60px;
   border-radius: 100px;
-  outline: none;
-  position: relative;
 
   &::before {
     content: ' ';
@@ -17,6 +15,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('assets/images/svg/icon_sun_min.svg');
+    z-index: 10;
   }
   &::after {
     content: ' ';
@@ -29,32 +28,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('assets/images/svg/icon_sun_max.svg');
-  }
-
-  &--lamp {
-    background: linear-gradient(
-      0.25turn,
-      $color__yellow--light,
-      $color__orange
-    ) !important;
-    &::-moz-range-track {
-      background: linear-gradient(
-        0.25turn,
-        $color__yellow--light,
-        $color__orange
-      ) !important;
-    }
-  }
-  @include for-phone-only {
-    transform: rotate(-90deg);
-    &:before {
-      transform: rotate(90deg);
-      left: 6%;
-    }
-    &:after {
-      transform: rotate(90deg);
-      right: 6%;
-    }
+    z-index: 10;
   }
   &--temperature {
     &::before {
@@ -80,23 +54,59 @@
         right: 8%;
       }
     }
-    background: linear-gradient(
-      0.25turn,
-      $color__blue,
-      $color__yellow--bright,
-      $color__orange
-    ) !important;
-    &::-moz-range-track {
+  }
+  @include for-phone-only {
+    transform: rotate(-90deg);
+    &:before {
+      transform: rotate(90deg);
+      left: 6%;
+    }
+    &:after {
+      transform: rotate(90deg);
+      right: 6%;
+    }
+  }
+  &__item {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 60px;
+    border-radius: 100px;
+    outline: none;
+    position: relative;
+
+    &--lamp {
+      background: linear-gradient(
+        0.25turn,
+        $color__yellow--light,
+        $color__orange
+      ) !important;
+      &::-moz-range-track {
+        background: linear-gradient(
+          0.25turn,
+          $color__yellow--light,
+          $color__orange
+        ) !important;
+      }
+    }
+    &--temperature {
       background: linear-gradient(
         0.25turn,
         $color__blue,
         $color__yellow--bright,
         $color__orange
       ) !important;
+      &::-moz-range-track {
+        background: linear-gradient(
+          0.25turn,
+          $color__blue,
+          $color__yellow--bright,
+          $color__orange
+        ) !important;
+      }
     }
   }
 }
-.slider::-webkit-slider-thumb {
+.slider__item::-webkit-slider-thumb {
   display: block;
   -webkit-appearance: none;
   appearance: none;
@@ -108,7 +118,7 @@
   cursor: pointer;
   box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.1);
 }
-.slider::-moz-range-thumb {
+.slider__item::-moz-range-thumb {
   display: block;
   width: 60px;
   height: 60px;

@@ -134,8 +134,8 @@ block content
                         .scripts__next
                         .scripts__pages
                             .scripts__page                  
-                                ul.scripts__list
-                                    li.scripts__item.scripts__item--device.bulb
+                                ul.scripts__list.scripts__list--devices
+                                    li.scripts__item.scripts__item--first.scripts__item--device.bulb
                                         .scripts__logo.scripts__logo--light_on            
                                         .scripts__title Xiaomi Yeelight LED Smart Bulb    
                                         .scripts__encounter Включено            
@@ -152,7 +152,7 @@ block content
                                         .scripts__title LIFX Mini Day &amp; Dusk A60 E27
                                         .scripts__encounter Включится в 17:00      
                             .scripts__page                        
-                                ul.scripts__list                                    
+                                ul.scripts__list.scripts__list--devices                                    
                                     li.scripts__item.scripts__item--device.temperature
                                         .scripts__logo.scripts__logo--light_on           
                                         .scripts__title Xiaomi Mi Air Purifier 2S  
@@ -191,7 +191,7 @@ block content
                     .overlay__text
                         .overlay__title Xiaomi Yeelight LED Smart Bulb
                         .overlay__status Включится в 17:00
-                    .overlay__logo
+                    .overlay__logo.scripts__logo.scripts__logo--light_on.scripts__logo--overlay
                 .overlay__types
                     .types.types--overlay 
                         span.types__item.types__item--overlay.types__item--active Вручную
@@ -200,7 +200,8 @@ block content
                             li.types__item.types__item--overlay Вечерний свет
                             li.types__item.types__item--overlay Рассвет
                 .overlay__slider
-                    input(type="range" min="1" max="100" value="65").slider.slider--lamp  
+                    .slider
+                        input(type="range" min="1" max="100" value="65").slider__item.slider__item--lamp  
             .overlay__control
                 .overlay__button.overlay__button--apply Применить
                 .overlay__button.overlay__button--close Закрыть        
@@ -210,7 +211,7 @@ block content
                     .overlay__text
                         .overlay__title Elgato Eve Degree Connected
                         .overlay__status Включено
-                    .overlay__logo
+                    .overlay__logo.scripts__logo.scripts__logo--light_on.scripts__logo--overlay
                 .overlay__types
                     .types.types--overlay 
                         span.types__item.types__item--overlay.types__item--active Вручную
@@ -219,7 +220,8 @@ block content
                             li.types__item.types__item--overlay Тепло                        
                             li.types__item.types__item--overlay Жарко                        
                 .overlay__slider
-                    input(type="range" min="1" max="100" value="65").slider.slider--temperature       
+                    .slider
+                        input(type="range" min="1" max="100" value="65").slider__item.slider__item--temperature       
             .overlay__control
                 .overlay__button.overlay__button--apply Применить
                 .overlay__button.overlay__button--close Закрыть             
@@ -229,7 +231,7 @@ block content
                     .overlay__text
                         .overlay__title Xiaomi Warm Floor
                         .overlay__status Включено
-                    .overlay__logo.                    
+                    .overlay__logo                    
                 .overlay__regulator
                     .regulator#regulator
                         input(type="range" min="17" max="27" value="23").regulator__input    

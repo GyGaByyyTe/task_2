@@ -177,8 +177,8 @@
               <div class="scripts__next"></div>
               <div class="scripts__pages">
                 <div class="scripts__page">                 
-                  <ul class="scripts__list">
-                    <li class="scripts__item scripts__item--device bulb">
+                  <ul class="scripts__list scripts__list--devices">
+                    <li class="scripts__item scripts__item--first scripts__item--device bulb">
                       <div class="scripts__logo scripts__logo--light_on">           </div>
                       <div class="scripts__title">Xiaomi Yeelight LED Smart Bulb    </div>
                       <div class="scripts__encounter">Включено            </div>
@@ -201,7 +201,7 @@
                   </ul>
                 </div>
                 <div class="scripts__page">                       
-                  <ul class="scripts__list">                                   
+                  <ul class="scripts__list scripts__list--devices">                                   
                     <li class="scripts__item scripts__item--device temperature">
                       <div class="scripts__logo scripts__logo--light_on">          </div>
                       <div class="scripts__title">Xiaomi Mi Air Purifier 2S  </div>
@@ -250,7 +250,7 @@
               <div class="overlay__title">Xiaomi Yeelight LED Smart Bulb</div>
               <div class="overlay__status">Включится в 17:00</div>
             </div>
-            <div class="overlay__logo"></div>
+            <div class="overlay__logo scripts__logo scripts__logo--light_on scripts__logo--overlay"></div>
           </div>
           <div class="overlay__types">
             <div class="types types--overlay"> <span class="types__item types__item--overlay types__item--active">Вручную</span>
@@ -262,7 +262,9 @@
             </div>
           </div>
           <div class="overlay__slider">
-            <input class="slider slider--lamp" type="range" min="1" max="100" value="65">
+            <div class="slider">
+              <input class="slider__item slider__item--lamp" type="range" min="1" max="100" value="65">
+            </div>
           </div>
         </div>
         <div class="overlay__control">
@@ -277,7 +279,7 @@
               <div class="overlay__title">Elgato Eve Degree Connected</div>
               <div class="overlay__status">Включено</div>
             </div>
-            <div class="overlay__logo"></div>
+            <div class="overlay__logo scripts__logo scripts__logo--light_on scripts__logo--overlay"></div>
           </div>
           <div class="overlay__types">
             <div class="types types--overlay"> <span class="types__item types__item--overlay types__item--active">Вручную</span>
@@ -289,7 +291,9 @@
             </div>
           </div>
           <div class="overlay__slider">
-            <input class="slider slider--temperature" type="range" min="1" max="100" value="65">
+            <div class="slider">
+              <input class="slider__item slider__item--temperature" type="range" min="1" max="100" value="65">
+            </div>
           </div>
         </div>
         <div class="overlay__control">
@@ -304,7 +308,7 @@
               <div class="overlay__title">Xiaomi Warm Floor</div>
               <div class="overlay__status">Включено</div>
             </div>
-            <div class="overlay__logo"></div>
+            <div class="overlay__logo">                   </div>
           </div>
           <div class="overlay__regulator">
             <div class="regulator" id="regulator">
